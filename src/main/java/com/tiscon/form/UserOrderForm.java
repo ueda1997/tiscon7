@@ -13,46 +13,46 @@ import javax.validation.constraints.NotNull;
  */
 public class UserOrderForm {
 
-    @NotBlank
+    @NotBlank(message="氏名を入力してください")
     private String customerName;
 
-    @NotBlank
-    @Numeric
+    @NotBlank(message="連絡先TELを入力してください")
+    @Numeric(message="数字で入力してください")
     private String tel;
 
-    @Email
-    @NotBlank
+    @Email(message="メールアドレスの形式で入力してください")
+    @NotBlank(message="連絡先メールアドレスを入力してください")
     private String email;
 
-    @NotBlank
+    @NotBlank(message="集荷元住所（都道府県）を入力してください")
     private String oldPrefectureId;
 
-    @NotBlank
+    @NotBlank(message="集荷元住所（市区町村以下）を入力してください")
     private String oldAddress;
 
-    @NotBlank
+    @NotBlank(message="お届け先住所（都道府県）を入力してください")
     private String newPrefectureId;
 
-    @NotBlank
+    @NotBlank(message="お届け先住所（市区町村以下）を入力してください")
     private String newAddress;
 
-    @Numeric
-    @NotBlank
+    @Numeric(message="数字で入力してください")
+    @NotBlank(message="段ボールの個数を入力してください")
     private String box;
 
-    @Numeric
-    @NotBlank
+    @Numeric(message="数字で入力してください")
+    @NotBlank(message="ベッドの個数を入力してください")
     private String bed;
 
-    @Numeric
-    @NotBlank
+    @Numeric(message="数字で入力してください")
+    @NotBlank(message="自転車の個数を入力してください")
     private String bicycle;
 
-    @Numeric
-    @NotBlank
+    @Numeric(message="数字で入力してください")
+    @NotBlank(message="洗濯機の個数を入力してください")
     private String washingMachine;
 
-    @NotNull
+    @NotNull(message="洗濯機の設置工事申し込みの有無を選択してください")
     private boolean washingMachineInstallation;
 
     public String getCustomerName() {
