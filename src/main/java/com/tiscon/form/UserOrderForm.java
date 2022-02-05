@@ -20,6 +20,10 @@ public class UserOrderForm {
     @Numeric
     private String tel;
 
+    @NotBlank
+    @Numeric
+    private String Ndate;
+
     @Email
     @NotBlank
     private String email;
@@ -78,6 +82,10 @@ public class UserOrderForm {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getNdate() {return Ndate;}
+
+    public void setNdate(String Ndate) {this.Ndate = Ndate;}
 
     public String getOldPrefectureId() {
         return oldPrefectureId;

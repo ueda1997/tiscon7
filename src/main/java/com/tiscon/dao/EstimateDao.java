@@ -147,4 +147,8 @@ public class EstimateDao {
         SqlParameterSource paramSource = new MapSqlParameterSource("serviceId", serviceId);
         return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
     }
+
+    /**public int getSeason(int season) {
+
+    }*/
 }

@@ -74,6 +74,16 @@ public class EstimateService {
         // 小数点以下を切り捨てる
         int distanceInt = (int) Math.floor(distance);
 
+        //日程から季節係数を産出する
+        /**double seasonN = 1;
+
+        if(3 <= Ndatem && Ndatem <= 4 ) {
+            return seasonN = 1.5;
+        } else if(Ndatem == 9) {
+            return seasonN == 1.2;
+        }
+        }*/
+
         // 距離当たりの料金を算出する
         int priceForDistance = distanceInt * PRICE_PER_DISTANCE;
 
@@ -92,7 +102,7 @@ public class EstimateService {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        return (priceForDistance + pricePerTruck + priceForOptionalService);
     }
 
     /**

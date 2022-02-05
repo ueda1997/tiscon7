@@ -87,6 +87,24 @@
         </tbody>
       </table>
     </div>
+
+    <div class="col-sm-12">
+      <div class="sub-title">引越し予定日</div>
+      <table class="table table-bordered">
+        <col span="1" style="background-color: #FFFFFF;">
+        <col span="2" style="background-color: #FFFFFF;">
+        <tbody>
+        <tr>
+          <th style="width: 40%">引越し予定日</th>
+          <td>
+            <span th:text="*{Ndate}" />
+          </td>
+          <input type="hidden" name="Ndate" id="Ndate" th:value="*{Ndate}"/>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="col-sm-12">
       <div class="sub-title">お荷物情報</div>
         <table class="table table-bordered">
