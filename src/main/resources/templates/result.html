@@ -77,17 +77,30 @@
         </tbody>
       </table>
 
-      <div class="sub-title">お客様情報</div>
+      <div class="sub-title">引越し予定日</div>
       <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
         <col span="2" style="background-color: #FFFFFF;">
         <tbody>
         <tr>
-          <th style="width: 40%">引越し予定日</th>
-          <td><span th:text="*{Ndata}"></span></td>
-          <input type="hidden" name="Ndate" id="Ndate" th:value="*{Ndate}"/>
+          <th>年</th>
+          <td><span th:text="*{dateY}"></span></td>
+          <input type="hidden" name="dateY" id="dateY" th:value="*{dateY}"/>
+        </tr>
+        <tr>
+        <tr>
+          <th>月</th>
+          <td><span th:text="*{dateM}"></span></td>
+          <input type="hidden" name="dateM" id="dateM" th:value="*{dateM}"/>
+        </tr>
+        <tr>
+        <tr>
+          <th>日</th>
+          <td><span th:text="*{dateD}"></span></td>
+          <input type="hidden" name="dateD" id="dateD" th:value="*{dateD}"/>
         </tr>
         </tbody>
+      </table>>
 
 
       <div class="sub-title">お荷物情報</div>

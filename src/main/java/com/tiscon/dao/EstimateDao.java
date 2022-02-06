@@ -31,14 +31,25 @@ public class EstimateDao {
     }
 
     /**
+     * 引越し予定日を登録する.
+     *
+     * @param Ndate 引越し予定日
+     * ＠return 引越し予定日
+     */
+    /**public int insert(){
+        String sql = "INSERT INTO MOVEDATE(DATE_ID)" + "VALUES(:Ndate)";
+     return NdateMonth
+    }*/
+
+    /**
      * 顧客テーブルに登録する。
      *
      * @param customer 顧客情報
      * @return 登録件数
      */
     public int insertCustomer(Customer customer) {
-        String sql = "INSERT INTO CUSTOMER(OLD_PREFECTURE_ID, NEW_PREFECTURE_ID, CUSTOMER_NAME, TEL, EMAIL, OLD_ADDRESS, NEW_ADDRESS)"
-                + " VALUES(:oldPrefectureId, :newPrefectureId, :customerName, :tel, :email, :oldAddress, :newAddress)";
+        String sql = "INSERT INTO CUSTOMER(OLD_PREFECTURE_ID, NEW_PREFECTURE_ID, CUSTOMER_NAME, TEL, EMAIL, OLD_ADDRESS, NEW_ADDRESS, DATE_Y, DATE_M, DATE_D)"
+                + " VALUES(:oldPrefectureId, :newPrefectureId, :customerName, :tel, :email, :oldAddress, :newAddress, :dateY, :dateM, :dateD)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int resultNum = parameterJdbcTemplate.update(sql, new BeanPropertySqlParameterSource(customer), keyHolder);
         customer.setCustomerId(keyHolder.getKey().intValue());
