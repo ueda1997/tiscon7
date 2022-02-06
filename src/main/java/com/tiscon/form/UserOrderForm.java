@@ -111,10 +111,7 @@ public class UserOrderForm {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getNdate() {return Ndate;}
-
-    public void setNdate(String Ndate) {this.Ndate = Ndate;}
+    
 
     public String getOldPrefectureId() {
         return oldPrefectureId;
