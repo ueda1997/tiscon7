@@ -28,7 +28,7 @@
         <div class="sub-title">お客様情報</div>
         <div class="form-group">
           <label for="customerName">氏名</label>
-          <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
+          <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎" autofocus/>
         </div>
         <div class="form-group">
           <label for="tel">連絡先TEL</label>
@@ -88,10 +88,10 @@
         </div>
         <div class="form-group">
           <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="なし">なし</option>
-            <option th:value="true" th:text="あり">あり</option>
-          </select>
+          <input id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
+            <input type="checkbox" th:value="false" th:text="なし"></input>
+            <input type="checkbox" th:value="true" th:text="あり"></input>
+          </input>
         </div>
       </fieldset>
       <div class="form-group">
