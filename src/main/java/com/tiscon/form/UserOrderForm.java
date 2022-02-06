@@ -20,9 +20,14 @@ public class UserOrderForm {
     @Numeric(message="半角数字で連絡先TELを入力してください")
     private String tel;
 
-    @NotBlank(message="引っ越し予定日を入力してください")
-    @Numeric
-    private String Ndate;
+    @NotBlank(message="年を入力してください")
+    private String dateY;
+
+    @NotBlank(message="月を入力してください")
+    private String dateM;
+
+    @NotBlank(message="日を入力してください")
+    private String dateD;
 
     @Email(message="メールアドレスの形式で入力してください")
     @NotBlank(message="連絡先メールアドレスを入力してください")
@@ -73,6 +78,30 @@ public class UserOrderForm {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public String getDateY() {
+        return dateY;
+    }
+
+    public void setDateY(String dateY) {
+        this.dateY = dateY;
+    }
+
+    public String getDateM() {
+        return dateM;
+    }
+
+    public void setDateM(String dateM) {
+        this.dateM = dateM;
+    }
+
+    public String getDateD() {
+        return dateD;
+    }
+
+    public void setDateD(String dateD) {
+        this.dateD = dateD;
     }
 
     public String getEmail() {

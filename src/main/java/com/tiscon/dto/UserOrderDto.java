@@ -16,7 +16,11 @@ public class UserOrderDto {
 
     private String newAddress;
 
-    private String Ndate;
+    private String dateY;
+
+    private String dateM;
+
+    private String dateD;
 
     private String box;
 
@@ -43,6 +47,28 @@ public class UserOrderDto {
     public void setTel(String tel) {
         this.tel = tel;
     }
+
+    public String getDateY() {
+        return dateY;
+    }
+
+    public void setDateY(String dateY) {
+        this.dateY = dateY;
+    }
+
+    public String getDateM() {
+        return dateM;
+    }
+
+    public void setDateM(String dateM) {
+        this.dateM = dateM;
+    }
+
+    public String getDateD() {
+        return dateD;
+    }
+
+    public void setDateD(String dateD) {this.dateD = dateD;}
 
     public String getEmail() {
         return email;
@@ -84,13 +110,8 @@ public class UserOrderDto {
         this.newAddress = newAddress;
     }
 
-    public String getNdate() {
-        return Ndate;
-    }
 
-    public void setNdate(String Ndate) {
-        this.Ndate = Ndate;
-    }
+
 
     public int getBox() {
         return Integer.parseInt(box);

@@ -103,11 +103,25 @@
         <col span="2" style="background-color: #FFFFFF;">
         <tbody>
         <tr>
-          <th style="width: 40%">引越し予定日</th>
+          <th style="width: 40%">年</th>
           <td>
-            <span th:text="*{Ndate}" />
+            <span th:text="*{dateY}" />
           </td>
-          <input type="hidden" name="Ndate" id="Ndate" th:value="*{Ndate}"/>
+          <input type="hidden" name="dateY" id="dateY" th:value="*{dateY}"/>
+        </tr>
+        <tr>
+          <th style="width: 40%">月</th>
+          <td>
+            <span th:text="*{dateM}" />
+          </td>
+          <input type="hidden" name="dateM" id="dateM" th:value="*{dateM}"/>
+        </tr>
+        <tr>
+          <th style="width: 40%">日</th>
+          <td>
+            <span th:text="*{dateD}" />
+          </td>
+          <input type="hidden" name="dateD" id="dateD" th:value="*{dateD}"/>
         </tr>
         </tbody>
       </table>
