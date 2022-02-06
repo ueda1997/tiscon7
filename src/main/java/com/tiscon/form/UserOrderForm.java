@@ -111,7 +111,7 @@ public class UserOrderForm {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
 
     public String getOldPrefectureId() {
         return oldPrefectureId;
