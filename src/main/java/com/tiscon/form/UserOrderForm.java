@@ -17,10 +17,10 @@ public class UserOrderForm {
     private String customerName;
 
     @NotBlank(message="連絡先TELを入力してください")
-    @Numeric(message="数字で入力してください")
+    @Numeric(message="半角数字で連絡先TELを入力してください")
     private String tel;
 
-    @NotBlank
+    @NotBlank(message="引っ越し予定日を入力してください")
     @Numeric
     private String Ndate;
 
@@ -40,19 +40,19 @@ public class UserOrderForm {
     @NotBlank(message="お届け先住所（市区町村以下）を入力してください")
     private String newAddress;
 
-    @Numeric(message="数字で入力してください")
+    @Numeric(message="数字で段ボールの個数を入力してください")
     @NotBlank(message="段ボールの個数を入力してください")
     private String box;
 
-    @Numeric(message="数字で入力してください")
+    @Numeric(message="数字でベッドの個数を入力してください")
     @NotBlank(message="ベッドの個数を入力してください")
     private String bed;
 
-    @Numeric(message="数字で入力してください")
+    @Numeric(message="数字で自転車の個数を入力してください")
     @NotBlank(message="自転車の個数を入力してください")
     private String bicycle;
 
-    @Numeric(message="数字で入力してください")
+    @Numeric(message="数字で洗濯機の個数を入力してください")
     @NotBlank(message="洗濯機の個数を入力してください")
     private String washingMachine;
 
